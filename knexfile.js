@@ -4,14 +4,16 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: {
-      filename: 'postgres://localhost/amazon_bay',
-      migrations: {
-        directory: './db/migrations'
-      },
-      useNullAsDefault: true
-    }
+    connection: 'postgres://localhost/amazon_bay',
+    migrations: {
+      directory: './db/migrations'
+    },
+    seeds: {
+      directory: './db/seeds/test'
+    },
+    useNullAsDefault: true
   }
+}
 
   // production: {
   //   client: 'postgresql',
@@ -28,5 +30,3 @@ module.exports = {
   //     tableName: 'knex_migrations'
   //   }
   // }
-
-};
