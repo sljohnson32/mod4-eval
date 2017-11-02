@@ -1,5 +1,3 @@
-console.log("its working!")
-
 //html generators
 const generateInventory = (item) => {
   let { title, description, image_url, price } = item;
@@ -60,7 +58,6 @@ const clearCart = () => {
 const createOrderHistory = (finalCost, date) => {
   let orderNumber = parseInt($('.order-item').last().attr('data-number')) + parseInt(1) || 1;
   let formattedDate = formatDate(date);
-  console.log(formattedDate)
   let orderItem = $(`
     <article class='order-item' data-number=${orderNumber}>
       <h2>Order #${orderNumber}</h2>
@@ -72,8 +69,8 @@ const createOrderHistory = (finalCost, date) => {
 }
 
 const formatDate = (date) => {
-  let inputDate = new Date(date.replace(' ', 'T'));
-  console.log(date.getMonth())
+  let newDate = new Date(date)
+  return newDate.toDateString();
 }
 
 const loadOrderHistory = () => {
