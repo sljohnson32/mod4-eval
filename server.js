@@ -52,9 +52,9 @@ app.post('/api/v1/order_history', (request, response) => {
       .send({ error: `Expected format: { cost: <Decimal> }. You did not include the cost as a property in your request.` });
   }
 
-  database('order_history').insert(order, 'id')
+  database('order_history').insert(order, 'created_at')
     .then(order => {
-      response.status(201).json({ id: order[0] });
+      response.status(201).json({ created_at: order[0] });
     })
     .catch(error => {
       response.status(500).json({ error });

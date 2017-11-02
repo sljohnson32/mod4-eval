@@ -46,8 +46,8 @@ const addItem = (e) => {
 const placeOrderListener = () => {
   $('#cart-checkout-button').on('click', () => {
     let finalCost = parseFloat($('#cart-total').text());
-    fetchAddOrder(finalCost);
-    createOrderHistory(finalCost);
+    fetchAddOrder(finalCost)
+    .then(date => createOrderHistory(finalCost, date.created_at));
     clearCart();
   })
 }
@@ -58,12 +58,12 @@ const clearCart = () => {
 }
 
 const createOrderHistory = (finalCost, date) => {
-  let orderNumber = $('.order-item').last().attr('data-number') || 1;
+  let orderNumber = parseInt($('.order-item').last().attr('data-number')) + parseInt(1) || 1;
   let orderItem = $(`
     <article class='order-item' data-number=${orderNumber}>
       <h2>Order #${orderNumber}</h2>
       <p>Order Date: ${date}</p>
-      <p>Total Price: ${finalCost}</p>
+      <p>Total Price: $${finalCost}</p>
     </article>
     `);
   $('#order-items-container').append(orderItem);
