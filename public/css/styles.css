@@ -17,6 +17,14 @@ header {
   text-decoration: underline;
 }
 
+button:focus {
+  outline:0;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
+
 #inventory-container {
   display: flex;
   justify-content: center;
@@ -61,6 +69,7 @@ header {
 
 
 .side-container {
+  background-color: white;
   border: 3px solid #009688;
   height: 80vh;
   top: 15vh;
@@ -74,10 +83,18 @@ header {
   z-index: 1;
 }
 
+#cart-container.show {
+  right: 0px;
+}
+
 #order-history-container {
   float: left;
   left: -340px;;
   z-index: 1;
+}
+
+#order-history-container.show {
+  left: 0px;
 }
 
 .main-section {
@@ -99,8 +116,9 @@ aside {
 }
 
 .slider-button {
-  width: 59px;
-  height: 59px;
+  border-radius: 0;
+  width: 99%;
+  height: 100%;
   border: none;
 }
 

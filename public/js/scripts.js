@@ -1,12 +1,5 @@
 console.log("its working!")
 
-// const runConsoles = () => {
-//   console.log('RUNNING FETCHES!')
-//   console.log(fetchInventory())
-//   console.log(fetchOrderHistory())
-//   console.log(fetchAddOrder(6.95))
-// }
-
 //html generators
 const generateInventory = (item) => {
   let { title, description, image_url, price } = item;
@@ -30,6 +23,14 @@ const generateInventory = (item) => {
 
 
 //page actions
+const addSliderListeners = () => {
+  $('.slider-button').on('click', (e) => {
+    $(e.target).closest('.side-container').toggleClass('show');
+    if ($(e.target).text() == '+') {
+      $(e.target).text('-')
+    } else $(e.target).text('+')
+  })
+}
 
 const loadInventory = () => {
   fetchInventory()
@@ -43,6 +44,6 @@ const loadInventory = () => {
 
 
 $(document).ready(() => {
-  // runConsoles()
-  loadInventory()
+  addSliderListeners();
+  loadInventory();
 });
