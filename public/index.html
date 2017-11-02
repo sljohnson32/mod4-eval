@@ -13,40 +13,46 @@
 
     <section id='inventory-container'>
     </section>
-    <section id='order-history-container'>
+
+    <section id='order-history-container' class='side-container'>
+
+      <section class='main-section'>
+        <header>Order History</header>
+        <section id='order-items-container'>
+        </section>
+      </section>
+
+      <aside id="order-history-aside">
+        <section class='slider-button-container'>
+          <button id='order-history-slider-button' class='slider-button'>+</button>
+        </section>
+        <section class='aside-label'>
+          <p>Order History</p>
+        </section>
+      </aside>
+
     </section>
 
-    <section id='cart-container'>
+    <section id='cart-container' class='side-container'>
+
       <aside id="cart-aside">
-        <section id='cart-slider'>
-          <button id='cart-slider-button'>-</button>
+        <section class='slider-button-container'>
+          <button id='cart-slider-button' class='slider-button'>+</button>
         </section>
-        <section id='cart-side-label'>
+        <section class='aside-label'>
           <p>Cart</p>
         </section>
       </aside>
-      <header>Cart</header>
-      <section>
+
+      <section class='main-section'>
+        <header>Cart</header>
         <h4>Items</h4>
         <ul id='cart-items-container'>
         </ul>
         <p>Total: $<div id='cart-total'>0.00</div></p>
+        <button id='cart-checkout-button'>Checkout and Purchase</button>
       </section>
-      <button id='cart-checkout-button'>Checkout and Purchase</button>
-    </section>
 
-    <section id='order-history-container'>
-      <aside id="order-history-aside">
-        <section id='order-history-slider'>
-          <button id='order-history-slider-button'>+</button>
-        </section>
-        <section id='order-history-side-label'>
-          <p>Order History</p>
-        </section>
-      </aside>
-      <header>Order History</header>
-      <section id='order-items-container'>
-      </section>
     </section>
 
   </body>
