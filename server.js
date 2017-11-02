@@ -16,49 +16,52 @@ app.get('/', (request, response) => {
   response.sendfile('index.html');
 });
 
-// //API endpoints
-// app.get('/api/v1/districts', (request, response) => {
-//   let { countyID } = request.query;
-//
-//   const checkQuery = () => {
-//     if (countyID) {
-//       return database('districts').where('county_id', countyID).select();
-//     } else {
-//       return database('districts').select();
-//     }
-//   };
-//
-//   checkQuery()
-//     .then((districts) => {
-//       response.status(200).json(districts);
-//     })
-//     .catch((error) => {
-//       response.status(500).json({error});
-//     });
-// });
-//
-//
-// app.post('/api/v1/schools', (request, response) => {
-//   const school = request.body;
-//
-//   for (let requiredParameter of ['name', 'school_code', 'student_count', 'teacher_count', 'student_teacher_ratio', 'district_id']) {
-//     if (!school[requiredParameter]) {
-//       return response
-//         .status(422)
-//         .send({ error: `Expected format: { name: <String>, school_code: <String>, student_count: <String>, techer_count: <String>, studetn_teacher_ratio: <String> }. You're missing a '${requiredParameter}' property.` });
-//     }
-//   }
-//
-//   database('schools').insert(school, 'id')
-//     .then(school => {
-//       response.status(201).json({ id: school[0] });
-//     })
-//     .catch(error => {
-//       response.status(500).json({ error });
-//     });
-// });
-//
-//
+// API ENDPOINTS
+
+//Inventory GET endpoint
+app.get('/api/v1/inventory', (request, response) => {
+
+  database('inventory').select()
+    .then(inventory => {
+      response.status(200).json(inventory);
+    })
+    .catch((error) => {
+      response.status(500).json({error});
+    });
+});
+
+//Order History Endpoints
+
+app.get('/api/v1/order_history', (request, response) => {
+
+  database('order_history').select()
+    .then(history => {
+      response.status(200).json(history);
+    })
+    .catch((error) => {
+      response.status(500).json({error});
+    });
+});
+
+app.post('/api/v1/order_history', (request, response) => {
+  const order = request.body;
+
+  if (!order[cost]) {
+    return response
+      .status(422)
+      .send({ error: `Expected format: { cost: <Decimal> }. You did not include the cost as a property in your request.` });
+  }
+
+  database('order_history').insert(order, 'id')
+    .then(order => {
+      response.status(201).json({ id: order[0] });
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    });
+});
+
+
 
 app.listen(app.get('port'), () => {
   console.log(`Amazon-Bay is running on ${app.get('port')}.`);
