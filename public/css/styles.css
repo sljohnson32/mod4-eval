@@ -42,8 +42,8 @@ button:hover {
 
 .inventory-card {
   border: 1px solid #303F9F;
-  height: 425px;
-  width: 150px;
+  height: 350px;
+  width: 250px;
   margin: 10px 10px;
   font-weight: normal;
 }
@@ -63,7 +63,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   height: 200px;
-  width: 150px;
+  width: 250px;
 }
 
 
