@@ -34,7 +34,7 @@ app.get('/api/v1/inventory', (request, response) => {
 
 app.get('/api/v1/order_history', (request, response) => {
 
-  database('order_history').select()
+  database('order_history').orderBy('id').select()
     .then(history => {
       response.status(200).json(history);
     })
