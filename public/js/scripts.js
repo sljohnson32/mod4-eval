@@ -15,7 +15,7 @@ const generateInventory = (item) => {
     `<div class='card-info-container'>
       <h3>${title}</h3>
       <p>${description}</p>
-      <img src=${image_url} />
+      <div class='img-container' style="background-image: url(${image_url});"/>
       <p><div class='bold'>Price:</div> $${price}</p>
     </div>`)
   let cardButton = $(`
@@ -33,7 +33,7 @@ const loadInventory = () => {
   fetchInventory()
   .then(data => {
     data.forEach(item => {
-      $('#inventory-container').append(generateInventory(item))
+      $('#card-container').append(generateInventory(item))
     });
   });
 };

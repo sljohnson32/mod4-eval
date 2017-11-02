@@ -2,7 +2,9 @@ body {
   background-color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
+  overflow-x: hidden;
   text-align: center;
+  width: 100vw;
 }
 
 header {
@@ -17,14 +19,37 @@ header {
 
 #inventory-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   width: 100vw;
+  margin-top: 20px;
 }
+
+#card-container {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inventory-card {
+  height: 425px;
+  width: 150px;
+  margin: 10px 10px;
+}
+
+.img-container {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 150px;
+}
+
 
 .side-container {
   border: 3px solid #009688;
   height: 80vh;
+  top: 15vh;
   position: absolute;
   width: 400px;
 }
