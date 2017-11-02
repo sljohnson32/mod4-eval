@@ -1,0 +1,26 @@
+[
+  {
+    "title": "An actual LIVE tiger",
+    "description": "Cheeseburgers are delicious.",
+    "image_url": "https://cdn.pixabay.com/photo/2016/04/20/23/47/tiger-1342385_1280.jpg",
+    "price": "9999.99"
+  },
+  {
+    "title": "A big elephant",
+    "description": "Cheeseburgers are delicious",
+    "image_url": "https://i.ytimg.com/vi/SNggmeilXDQ/maxresdefault.jpg",
+    "price": "4999.99"
+  },
+  {
+    "title": "A scared giraffe",
+    "description": "Cheeseburgers are delicious",
+    "image_url": "http://img.izismile.com/img/img2/20090731/funny_giraffe_25.jpg",
+    "price": "9.99"
+  },
+  {
+    "title": "An old ass monkey",
+    "description": "Cheeseburgers are delicious",
+    "image_url": "http://www.graphics99.com/wp-content/uploads/2012/06/i-saw-many-up-and-downs-of-life.jpg",
+    "price": "19.99"
+  }
+]
