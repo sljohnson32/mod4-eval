@@ -1,7 +1,7 @@
 body {
   background-color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   overflow-x: hidden;
   text-align: center;
   width: 100vw;
@@ -24,6 +24,7 @@ button:hover {
   filter: brightness(85%);
 }
 
+/*INVENTORY SPECIFIC CSS*/
 #inventory-container {
   display: flex;
   justify-content: center;
@@ -44,7 +45,6 @@ button:hover {
   height: 425px;
   width: 150px;
   margin: 10px 10px;
-  font-size: 18px;
   font-weight: normal;
 }
 
@@ -67,33 +67,11 @@ button:hover {
 }
 
 
-.side-container {
-  background-color: white;
-  border: 3px solid #009688;
-  height: 80vh;
-  top: 15vh;
-  position: absolute;
-  width: 400px;
-}
-
-#cart-container {
-  float: right;
-  right: -340px;
-  z-index: 1;
-}
-
-#cart-container.show {
-  right: 0px;
-}
-
-#order-history-container {
-  float: left;
-  left: -340px;;
-  z-index: 1;
-}
-
-#order-history-container.show {
-  left: 0px;
+/*GENERAL SLIDERS SPECIFIC CSS*/
+aside {
+  display: inline-block;
+  height: 100%;
+  width: 60px;
 }
 
 .main-section {
@@ -102,10 +80,13 @@ button:hover {
   width: 330px;
 }
 
-aside {
-  display: inline-block;
-  height: 100%;
-  width: 60px;
+.side-container {
+  background-color: white;
+  border: 3px solid #009688;
+  height: 80vh;
+  top: 15vh;
+  position: absolute;
+  width: 400px;
 }
 
 .slider-button-container {
@@ -128,14 +109,50 @@ aside {
   font-size: 16px;
 }
 
-#cart-aside {
-  position: relative;
-  float: left;
-  border-right: 3px solid #009688;
-}
 
+/*ORDER HISTORY SPECIFIC CSS*/
 #order-history-aside {
   position: relative;
   float: right;
   border-left: 3px solid #009688;
+}
+
+#order-history-container {
+  float: left;
+  left: -340px;;
+  z-index: 1;
+}
+
+#order-history-container.show {
+  left: 0px;
+}
+
+#order-items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item {
+  display: inline-block;
+  width: 95%;
+  margin: 5px 10px;
+  text-align: left;
+}
+
+
+/*CART SPECIFIC CSS*/
+#cart-container {
+  float: right;
+  right: -340px;
+  z-index: 1;
+}
+
+#cart-container.show {
+  right: 0px;
+}
+
+#cart-aside {
+  position: relative;
+  float: left;
+  border-right: 3px solid #009688;
 }

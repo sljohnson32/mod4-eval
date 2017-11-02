@@ -59,14 +59,21 @@ const clearCart = () => {
 
 const createOrderHistory = (finalCost, date) => {
   let orderNumber = parseInt($('.order-item').last().attr('data-number')) + parseInt(1) || 1;
+  let formattedDate = formatDate(date);
+  console.log(formattedDate)
   let orderItem = $(`
     <article class='order-item' data-number=${orderNumber}>
       <h2>Order #${orderNumber}</h2>
-      <p>Order Date: ${date}</p>
+      <p>Order Date: ${formattedDate}</p>
       <p>Total Price: $${finalCost}</p>
     </article>
     `);
   $('#order-items-container').append(orderItem);
+}
+
+const formatDate = (date) => {
+  let inputDate = new Date(date.replace(' ', 'T'));
+  console.log(date.getMonth())
 }
 
 const loadOrderHistory = () => {
