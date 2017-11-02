@@ -13,7 +13,9 @@ const generateInventory = (item) => {
   let cardContainer = $("<article class='inventory-card'></article>");
   let cardHTML = $(
     `<div class='card-info-container'>
-      <h3>${title}</h3>
+      <div class='card-header-container'>
+        <h3 class='bold'>${title}</h3>
+      </div>
       <p>${description}</p>
       <div class='img-container' style="background-image: url(${image_url});"/>
       <p><div class='bold'>Price:</div> $${price}</p>

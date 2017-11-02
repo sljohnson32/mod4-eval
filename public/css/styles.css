@@ -33,9 +33,23 @@ header {
 }
 
 .inventory-card {
+  border: 1px solid #303F9F;
   height: 425px;
   width: 150px;
   margin: 10px 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.card-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.inventory-card .bold {
+  font-weight: bold;
 }
 
 .img-container {
