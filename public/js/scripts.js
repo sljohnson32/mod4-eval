@@ -35,11 +35,10 @@ const addItem = (e) => {
   let title = $(e.target).attr('data-title');
   let price = $(e.target).attr('data-price');
   let newTotal = parseFloat($('#cart-total').text()) + parseFloat(price);
-  let newItem = $(`<li class='cart-item'>${title}<div class='item-price'>Price: $${price}</li>
+  let newItem = $(`<article class='cart-item'><p class='item-title'>${title}</p><p class='item-price'>Price: $${price}</p></article>
     `)
   $('#cart-items-container').append(newItem);
   $('#cart-total').text(newTotal)
-  // setLocalStorage(newTotal)
 }
 
 const placeOrderListener = () => {
