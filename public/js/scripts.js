@@ -90,16 +90,6 @@ const loadInventory = () => {
   });
 };
 
-// const setLocalStorage = (total) => {
-//   let items = [$('#cart-items-container').children()]
-//   localStorage.setItem('amazon-bay', JSON.stringify({ items: items }));
-// }
-
-// const checkLocalStorage = () => {
-//   let savedItems = localStorage.getItem('amazon-bay');
-//   console.log(savedItems)
-// }
-
 
 
 $(document).ready(() => {
@@ -107,5 +97,4 @@ $(document).ready(() => {
   placeOrderListener();
   loadInventory();
   loadOrderHistory();
-  // checkLocalStorage();
 });
