@@ -52,10 +52,11 @@ button:hover {
 
 .inventory-card {
   border: 1px solid #303F9F;
-  height: 350px;
+  height: 360px;
   width: 250px;
   margin: 10px 10px;
   font-weight: normal;
+  position: relative;
 }
 
 .card-header-container {
@@ -74,6 +75,19 @@ button:hover {
   background-position: center;
   height: 200px;
   width: 250px;
+  margin: 10px 0;
+}
+
+.card-button {
+  margin-top: 5px;
+  border: none;
+  background-color: #BDBDBD;
+  border-radius: 0;
+  bottom: 0;
+  font-size: 24px;
+  height: 37px;
+  width: 100%;
+  border-top: 2px solid #303F9F;
 }
 
 
@@ -194,16 +208,23 @@ aside {
   margin: 20px;
 }
 
+.cart-item {
+  margin: 20px 20px;
+  display: flex;
+  align-items: center;
+}
 
-#cart-items-container li {
-  margin: 0 20px;
+.item-title {
+  width: 180px;
+  display: inline-block;
 }
 
 .item-price {
-  margin-left: 20px;
-  display: inline;
+  margin-left: 15px;
+  display: inline-block;
   width: 150px;
 }
+
 
 #total-info {
   bottom: 80px;
