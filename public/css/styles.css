@@ -10,9 +10,9 @@ body {
 header {
   color: #3F51B5;
   font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
-  padding: 30px 0 40px;
+  padding: 30px 0 30px;
   text-align: center;
 }
 
@@ -22,6 +22,11 @@ button:focus {
 
 button:hover {
   filter: brightness(85%);
+}
+
+#main-header {
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 /*INVENTORY SPECIFIC CSS*/
@@ -55,7 +60,7 @@ button:hover {
   height: 45px;
 }
 
-.inventory-card .bold {
+.bold {
   font-weight: bold;
 }
 
@@ -100,6 +105,8 @@ aside {
   width: 99%;
   height: 100%;
   border: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .aside-label p {
@@ -121,6 +128,7 @@ aside {
   float: left;
   left: -340px;;
   z-index: 1;
+  overflow-y: scroll;
 }
 
 #order-history-container.show {
@@ -135,9 +143,20 @@ aside {
 .order-item {
   display: inline-block;
   width: 95%;
-  margin: 5px 10px;
+  margin: 5px 20px;
   text-align: left;
 }
+
+.order-item h2 {
+  margin-bottom: 5px;
+}
+
+.order-item p {
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+
 
 
 /*CART SPECIFIC CSS*/

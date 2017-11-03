@@ -61,7 +61,7 @@ const createOrderHistory = (finalCost, date) => {
   let formattedDate = formatDate(date);
   let orderItem = $(`
     <article class='order-item' data-number=${orderNumber}>
-      <h2>Order #${orderNumber}</h2>
+      <h2 class='bold'>Order #${orderNumber}</h2>
       <p>Order Date: ${formattedDate}</p>
       <p>Total Price: $${finalCost}</p>
     </article>
