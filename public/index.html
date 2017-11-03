@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./css/cards.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <title>Amazon-Bay</title>
   </head>
   <body>
-    <header>Amazon-Bay</header>
+    <header id='main-header'>Amazon-Bay</header>
 
     <section id='inventory-container'>
       <section id='card-container'>
       </section>
     </section>
 
-    <section id='order-history-container' class='side-container show'>
+    <section id='order-history-container' class='side-container'>
 
       <section class='main-section'>
-        <header>Order History</header>
+        <header class='bold'>Order History</header>
         <section id='order-items-container'>
         </section>
       </section>
@@ -37,7 +36,7 @@
     </section>
 
     <section id='cart-container' class='side-container show'>
-
+''
       <aside id="cart-aside">
         <section class='slider-button-container'>
           <button id='cart-slider-button' class='slider-button'>+</button>
@@ -47,12 +46,14 @@
         </section>
       </aside>
 
-      <section class='main-section'>
+      <section id='cart-info-container' class='main-section'>
         <header>Cart</header>
-        <h4>Items</h4>
+        <h4 class="bold">Items</h4>
         <ul id='cart-items-container'>
         </ul>
-        <p>Total: $<div id='cart-total'>0.00</div></p>
+        <div id='total-info'>
+          <p>Total: $<div id='cart-total'>0.00</div></p>
+        </div>
         <button id='cart-checkout-button'>Checkout and Purchase</button>
       </section>
 
