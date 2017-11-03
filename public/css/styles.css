@@ -16,6 +16,11 @@ header {
   text-align: center;
 }
 
+button {
+  height: 100%;
+  width: 100%;
+}
+
 button:focus {
   outline:0;
 }
@@ -81,6 +86,7 @@ aside {
 
 .main-section {
   display: inline-block;
+  text-align: left;
   height: 100%;
   width: 330px;
 }
@@ -156,9 +162,6 @@ aside {
   margin-bottom: 10px;
 }
 
-
-
-
 /*CART SPECIFIC CSS*/
 #cart-container {
   float: right;
@@ -174,4 +177,47 @@ aside {
   position: relative;
   float: left;
   border-right: 3px solid #009688;
+}
+
+#cart-checkout-button {
+  background-color: #BDBDBD;
+  bottom: 10px;
+  right: 30px;
+  border: none;
+  font-size: 18px;
+  height: 50px;
+  position: absolute;
+  width: 280px;
+}
+
+#cart-info-container h4 {
+  margin: 20px;
+}
+
+
+#cart-items-container li {
+  margin: 0 20px;
+}
+
+.item-price {
+  margin-left: 20px;
+  display: inline;
+  width: 150px;
+}
+
+#total-info {
+  bottom: 80px;
+  right: 30px;
+  font-size: 28px;
+  position: absolute;
+  width: 280px;
+}
+
+#total-info p {
+  display: inline;
+  width: 200px;
+}
+
+#cart-total {
+  display: inline;
 }
